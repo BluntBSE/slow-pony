@@ -1,38 +1,324 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.stealth {
+  display: none;
+}
+
+body {
+  font-family: piepie, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.myname-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56% 44%;
+}
+
+.myname-images {
+  position: relative;
+  mix-blend-mode: normal;
+}
+.myname-images img {
+  margin-top: 8%;
+  margin-left: 10%;
+  width: 95%;
+  mix-blend-mode: hard-light;
+}
+.myname-images:before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  width: 100%;
+  background-color: #4e008c;
+  height: calc(100%);
+  clip-path: polygon(0% 0%, 100% 0%, 0% 15vw, 0% 15vw);
+  mix-blend-mode: multiply;
+}
+
+.myname-text {
+  position: relative;
+  color: #a22aff;
+  font-family: fieldwork geo demibold, sans-serif;
+  font-size: 2vw;
+  text-align: right;
+  padding-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: -10%;
+}
+.myname-text .mn-text-1 {
+  text-align: left;
+  margin-left: -11%;
+  margin-bottom: -1vw;
+}
+.myname-text .mn-text-2 {
+  display: block;
+  width: 100%;
+  font-family: piepie, sans-serif;
+  font-size: 7.5vw;
+  margin-top: 0px;
+  margin-left: -13%;
+  text-transform: uppercase;
+}
+.myname-text .mn-text-3 {
+  display: block;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: piepie, sans-serif;
+  font-size: 7.5vw;
+  margin-left: -10%;
+}
+.myname-text .mn-text-4 {
+  display: block;
+  padding-left: 20%;
+  margin-right: 10%;
+}
+
+.headshot-block {
+  min-height: 30vw;
+  background-color: cyan;
+  display: grid;
+  grid-template-columns: 28% 72%;
+  grid-auto-flow: column;
+  transform: skewY(-15deg);
+  overflow: hidden;
+}
+.headshot-block .headshot-text {
+  align-self: center;
+  transform: skewY(15deg);
+  color: #a22aff;
+  text-transform: uppercase;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.headshot-block .headshot-text .hs-text-1 {
+  font-size: 5vw;
+}
+.headshot-block .headshot-text .hs-text-2 {
+  font-size: 2.6vw;
+}
+.headshot-block .headshot-text .hs-text-3 {
+  position: relative;
+  display: block;
+  margin-top: -1vw;
+  font-size: 7vw;
+}
+.headshot-block .headshot-text .hs-text-4 {
+  font-size: 3vw;
+  line-height: 3vw;
+}
+.headshot-block .headshot-image {
+  position: relative;
+  mix-blend-mode: darken;
+  margin-top: -19%;
+  transform: skewY(15deg);
+}
+.headshot-block .headshot-image img {
+  width: 100%;
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.print-block {
+  min-height: 50vw;
+  transform: skewY(-15deg);
+  background-color: orange;
+  display: grid;
+  grid-template-columns: 28% 72%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.print-block .print-icon {
+  background-color: white;
+}
+.print-block .print-content {
+  display: flex;
+  justify-content: center;
+}
+.print-block .print-content .print-carousel {
+  margin-top: 5%;
+  transform: skewY(15deg);
+  width: 35%;
+  height: 80%;
+  background-color: black;
+}
+.print-block .print-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  mix-blend-mode: pass-through;
+}
+.print-block .print-icon h2 {
+  transform: skewY(15deg);
+  color: #a22aff;
+  font-size: 4.5vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+.print-block .print-icon img {
+  transform: skewY(15deg);
+  margin-top: 2vw;
+  width: 60%;
+  object-fit: contain;
+  mix-blend-mode: hard-light;
 }
 
-.App-link {
-  color: #61dafb;
+.after-print {
+  width: 100%;
+  height: 8vw;
+  background-color: #4e008c;
+  transform: skewY(-15deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-bar {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-flow: row;
+  background-color: #4e008c;
+  mix-blend-mode: hard-light;
+  min-height: 2.5rem;
 }
+.nav-bar .burger-button {
+  justify-self: right;
+}
+
+/*# sourceMappingURL=app.css.map */
