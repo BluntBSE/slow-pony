@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
 import "./app.css";
+import MyCarousel from "./components/Carousel";
 
 function App() {
   return (
@@ -34,20 +34,50 @@ function App() {
             <img src={"./printicon.png"} />
           </div>
           <div className="print-content">
-            <div className="print-carousel"></div>
+            
+            <MyCarousel/>
+        
+         
           </div>
         </div>
         <div className="after-print"></div>
         <div className="ux-block">
-          <div className="ux-icon"></div>
-          <div className="ux-content"></div>
+          <div className="ux-content">
+            <div className="ux-carousel"></div>
+          </div>
+          <div className="ux-icon">
+            <h2>UX/UI</h2>
+            <img src={"./uxicon.png"} />
+          </div>
         </div>
-        <div className="after-ux"></div>
-        <div className="logos">
-          <div className="logos-icon"></div>
-          <div className="logos-content"></div>
+        <div className="after-print"></div>
+        <div className="print-block">
+          <div className="logos-icon">
+            <h2>LOGOS</h2>
+            <img src={"./logoicon.png"} />
+          </div>
+          <div className="print-content">
+            <div className="print-carousel"></div>
+          </div>
         </div>
-        <div className="after-logos"></div>
+        <div className="after-print"></div>
+        <div className="contact-block">
+          <div className="spy">
+            <img src={"./spy.png"} />
+          </div>
+          <div className="contact-content">
+            <div className="contact-group">
+              <h2>Contact</h2>
+              <button>
+                SEND
+                <br />
+                PIGEON
+              </button>
+              <img src={"./pigeon.png"} />
+            </div>
+          </div>
+        </div>
+        <div className="footer"></div>
       </div>
     </div>
   );
